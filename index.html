@@ -1,140 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Speedy</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #222;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 32px 20px;
-      background: #ffffff;
-    }
-    h1, h2 {
-      color: #111;
-    }
-    h1 {
-      margin-bottom: 8px;
-    }
-    p {
-      margin: 12px 0;
-    }
-    ul {
-      margin: 8px 0 16px 20px;
-    }
-    li {
-      margin-bottom: 6px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Speedy - Precision Speedometer</title>
+    <!-- Modern Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --bg-dark: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --accent-glow: rgba(0, 210, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(58, 123, 213, 0.05) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 10px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .highlight-box {
+            background: rgba(0, 210, 255, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+            margin: 20px 0;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-shadow: 0 0 8px var(--accent-glow);
+            filter: brightness(1.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <p><strong>App Name:</strong> Speedy – Precision GPS Speedometer</p>
-    <p><strong>Developer:</strong> Muhammed Shibil</p>
-    <p><strong>Last updated:</strong> 21 February 2026</p>
 
-    <h2>1. Introduction</h2>
-    <p>
-      Speedy (“the App”) is a GPS-based speedometer application designed to measure
-      speed, distance, and trip duration. This Privacy Policy explains how user and
-      device data is handled.
-    </p>
+    <div class="container">
+        <header class="header">
+            <p class="subtitle">Speedy – Precision GPS Speedometer</p>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: March 2026</p>
+        </header>
 
-    <h2>2. Information We Collect</h2>
-    <p>The App collects the following data:</p>
-    <ul>
-      <li><strong>Location data (GPS)</strong> to calculate speed, distance, and trip duration</li>
-      <li><strong>App usage data</strong> required for core functionality</li>
-    </ul>
-    <p>
-      The App does <strong>not</strong> collect personal identifiers such as name,
-      phone number, email address, or contacts.
-    </p>
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+                Welcome to <strong>Speedy</strong> (“the App”). We are committed to protecting your privacy. This policy
+                outlines how we handle location and device data to provide you with a high-precision speedometer and
+                trip tracking experience.
+            </p>
+        </section>
 
-    <h2>3. Location Data Usage</h2>
-    <p>
-      Location access is required for the App to function correctly.
-      Location data is used only while the App is active and a trip is in progress.
-    </p>
-    <p>
-      The App does <strong>not</strong> track location in the background.
-    </p>
+        <section id="collection">
+            <h2>2. Information We Collect</h2>
+            <p>To provide its core functionality, the App collects the following data:</p>
+            <ul>
+                <li><strong>Precise Location Data (GPS):</strong> Used to calculate speed, distance, and trip duration
+                    in real-time.</li>
+                <li><strong>Route Coordinates:</strong> Latitude and longitude points recorded during a trip to generate
+                    visual map paths.</li>
+                <li><strong>Device Information:</strong> Basic technical data required for app stability and
+                    advertisement delivery.</li>
+            </ul>
+            <div class="highlight-box">
+                Speedy does <strong>not</strong> collect personal identifiers such as your name, email address, phone
+                number, or contacts.
+            </div>
+        </section>
 
-    <h2>4. Data Storage</h2>
-    <p>
-      All trip data (such as speed history, distance, and duration) is stored
-      <strong>locally on the user’s device</strong>.
-    </p>
-    <p>
-      Users can delete all stored trip data at any time from within the App settings.
-    </p>
+        <section id="location">
+            <h2>3. Location & Map Data Usage</h2>
+            <p>
+                <strong>Active Tracking:</strong> Location access is required for the speedometer to function. This data
+                is used only while the App is active and a trip is being tracked.
+            </p>
+            <p>
+                <strong>Interactive Map:</strong> We use your coordinates to display your current position on a live map
+                and to render your traveled route history.
+            </p>
+            <p>
+                <strong>No Background Tracking:</strong> Speedy does not track your location when the app is closed or
+                when trip tracking is not engaged.
+            </p> section>
 
-    <h2>5. Third-Party Services</h2>
-    <p>
-      The App uses <strong>Google AdMob</strong> to display advertisements.
-      Google AdMob may collect device identifiers, network information, and usage data
-      to serve ads.
-    </p>
-    <p>
-      Data collected by Google AdMob is governed by Google’s own privacy policy.
-    </p>
+            <section id="storage">
+                <h2>4. Data Storage & Security</h2>
+                <p>
+                    <strong>Local-First Storage:</strong> All your trip history, including speed metrics and route maps,
+                    is stored <strong>locally on your device</strong> using a secure encrypted database.
+                </p>
+                <p>
+                    <strong>User Control:</strong> You have full control over your data. Trip history can be deleted
+                    individually, or all app data can be cleared at any time via the internal settings.
+                </p>
+            </section>
 
-    <h2>6. Data Sharing</h2>
-    <p>
-      The developer does not sell or share user data.
-      Any data collected by third-party services is handled according to their
-      respective privacy policies.
-    </p>
+            <section id="third-party">
+                <h2>5. Third-Party Services</h2>
+                <p>We use trusted third-party services to enhance your experience:</p>
+                <ul>
+                    <li><strong>Google AdMob:</strong> Used for displaying advertisements. They may collect device
+                        identifiers to serve personalized ads.</li>
+                    <li><strong>OpenStreetMap:</strong> Our map feature uses tiles provided by the OpenStreetMap
+                        community.</li>
+                </ul>
+            </section>
 
-    <h2>7. Children’s Privacy</h2>
-    <p>
-      This App is not intended for children under the age of 13.
-      The developer does not knowingly collect personal data from children.
-    </p>
+            <section id="sharing">
+                <h2>6. Data Sharing</h2>
+                <p>
+                    Your privacy is paramount. We <strong>do not sell, trade, or share</strong> your personal
+                    geolocation data with third parties. Any data processed by AdMob or OpenStreetMap is governed by
+                    their respective privacy policies.
+                </p>
+            </section>
 
-    <h2>8. User Control</h2>
-    <p>
-      Users can start or stop trip tracking at any time and can clear all stored data
-      from the App.
-    </p>
+            <section id="children">
+                <h2>7. Children’s Privacy</h2>
+                <p>
+                    Speedy is not intended for children under 13. We do not knowingly collect or maintain data from
+                    anyone under this age group.
+                </p>
+            </section>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>
-      This Privacy Policy may be updated in the future.
-      Any changes will be reflected on this page.
-    </p>
+            <section id="contact">
+                <h2>8. Contact & Support</h2>
+                <p>If you have questions regarding this policy or your data, please reach out:</p>
+                <p>
+                    <strong>Developer:</strong> Muhammed Shibil<br>
+                    <strong>Email:</strong> <a
+                        href="mailto:muhammedshibilm3@gmail.com">muhammedshibilm3@gmail.com</a><br>
+                    <strong>Web:</strong> <a href="https://speedy.muhammedshibilm.tech"
+                        target="_blank">speedy.muhammedshibilm.tech</a>
+                </p>
+            </section>
 
-    <h2>10. Contact</h2>
-    <p>
-      If you have any questions about this Privacy Policy, you can contact:
-    </p>
-    <p>
-      Email: <a href="mailto:muhammedshibilm3@gmail.com">muhammedshibilm3@gmail.com</a><br />
-      Website: <a href="https://speedy.muhammedshibilm.tech">https://speedy.muhammedshibilm.tech</a>
-    </p>
+            <footer>
+                &copy; 2026 Speedy | Muhammed Shibil. All rights reserved.
+            </footer>
+    </div>
 
-    <footer>
-      © 2026 Muhammed Shibil. All rights reserved.
-    </footer>
-  </div>
 </body>
+
 </html>
